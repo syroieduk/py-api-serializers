@@ -5,7 +5,7 @@ from .models import CinemaHall, Genre, Actor, Movie, MovieSession
 class CinemaHallSerializer(serializers.ModelSerializer):
     class Meta:
         model = CinemaHall
-        fields = ("name", "rows", "seats_in_row", "capacity")
+        fields = ("id", "name", "rows", "seats_in_row", "capacity")
 
 
 class GenreSerializer(serializers.ModelSerializer):
@@ -31,7 +31,7 @@ class MovieListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Movie
-        fields = ("title", "description", "duration", "genres", "actors")
+        fields = ("id", "title", "description", "duration", "genres", "actors")
 
 
 class MovieDetailSerializer(serializers.ModelSerializer):
